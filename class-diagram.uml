@@ -1,0 +1,46 @@
+@startuml
+!define RECTANGLE class
+!define INTERFACE interface
+
+RECTANGLE User {
+  + username: string
+  + password: string
+  + email: string
+  + signUp()
+  + logIn()
+}
+
+RECTANGLE FinancialRecord {
+  + date: date
+  + description: string
+  + amount: decimal
+  + category: string
+  + save()
+  + update()
+  + delete()
+}
+
+RECTANGLE Budget {
+  + name: string
+  + totalIncome: decimal
+  + totalExpense: decimal
+  + startDate: date
+  + endDate: date
+  + addIncome()
+  + addExpense()
+  + calculateTotalIncome()
+  + calculateTotalExpense()
+  + generateReport()
+}
+
+User --> FinancialRecord: Record
+User --> Budget: Manage Budget
+
+skinparam class {
+BackgroundColor yellow
+ArrowColor Yellow
+BorderColor OrangeRed
+skinparam stereotypeCBackgroundColor OrangeRed
+}
+
+@enduml
