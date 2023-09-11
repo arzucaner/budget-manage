@@ -50,4 +50,4 @@ it('Test Adding a Financial Record', async () => {
 
     expect(foundRecord).toEqual(record);
 });
-});
+
