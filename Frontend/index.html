@@ -7,89 +7,64 @@
     <meta name="description" content="Budget Manage - Personal Finance Application">
     <title>Budget Manage</title>
     <link href="./bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .jumbotron {
-            background-color: #28a745;
-            color: #fff;
-        }
-
-        .card {
-            margin-top: 20px;
-        }
-
-        .custom-btn {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .custom-link {
-            text-decoration: underline;
-            color: #17a2b8;
-        }
-    </style>
-
 </head>
 
 <body>
-    <div class="container-fluid mt-5">
-        <div class="jumbotron jumbotron-fluid bg-success text-white text-center">
-            <div class="container">
-                <h1 class="display-4 font-weight-bold" style="font-size: 55px;">Budget Manage</h1>
-                <p class="lead font-weight-bold font-italic" style="font-size: 35px; font-style: italic;">"Take Control
-                    of Your Finances!"</p>
+    <div class="container mt-5">
+        <div class="jumbotron text-center bg-success text-white">
+            <h1 class="display-4">Budget Manage</h1>
+            <p class="lead font-italic">"Take Control of Your Finances!"</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Profile
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Arzu Caner</h5>
+                        <p class="card-text">Username: <span id="username">Arzu Caner</span></p>
+                        <p class="card-text">Email: <span id="email">arzuguneycaner@gmail.com</span></p>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        Expense
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Expense</h5>
+                        <p class="card-text">Date: <span id="recordDate">2023-09-10</span></p>
+                        <p class="card-text">Description: <span id="recordDescription">Expense</span></p>
+                        <p class="card-text">Amount: $<span id="recordAmount">200</span></p>
+                        <p class="card-text">Category: <span id="recordCategory">Food</span></p>
+                        <a href="#" class="btn btn-primary">Add Record</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Monthly Budget
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Monthly Budget</h5>
+                        <p class="card-text">Total Income: $<span id="totalIncome">2000</span></p>
+                        <p class="card-text">Total Expense: $<span id="totalExpense">1500</span></p>
+                        <p class="card-text">Start Date: <span id="startDate">2023-09-01</span></p>
+                        <p class="card-text">End Date: <span id="endDate">2023-09-30</span></p>
+                        <a href="#" class="btn btn-primary">Update Budget</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
-        </div>
-
-
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Arzu Caner</h5>
-        <p class="card-text">Username: <span id="username">Arzu Caner</span></p>
-        <p class="card-text">Email: <span id="email">arzuguneycaner@gmail.com</span></p>
-        <a href="#" class="btn btn-primary">Edit Profile</a>
-    </div>
-    </div>
-
-    <div class="card mb-3">
-        <div class="card-header bg-primary text-white">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Expense</h5>
-            <p class="card-text">Date: <span id="recordDate">2023-09-10</span></p>
-            <p class="card-text">Description: <span id="recordDescription">Expense</span></p>
-            <p class="card-text">Amount: $<span id="recordAmount">200</span></p>
-            <p class="card-text">Category: <span id="recordCategory">Food</span></p>
-            <a href="#" class="btn btn-primary">Add Record</a>
-        </div>
-    </div>
-
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
-
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Monthly Budget</h5>
-            <p class="card-text">Total Income: $<span id="totalIncome">2000</span></p>
-            <p class="card-text">Total Expense: $<span id="totalExpense">1500</span></p>
-            <p class="card-text">Start Date: <span id="startDate">2023-09-01</span></p>
-            <p class="card-text">End Date: <span id="endDate">2023-09-30</span></p>
-            <a href="#" class="btn btn-primary">Update Budget</a>
-        </div>
-    </div>
     </div>
 
     <script src="./bootstrap.min.js"></script>
