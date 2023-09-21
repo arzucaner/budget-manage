@@ -27,6 +27,33 @@ var data = {
     ]
 };
 
+var annotations = [
+    {
+        type: 'line',
+        mode: 'vertical',
+        scaleID: 'x',
+        value: 'March',
+        borderColor: 'gray',
+        borderWidth: 1,
+        label: {
+            enabled: true,
+            content: 'Özel Olay'
+        }
+    },
+    {
+        type: 'line',
+        mode: 'vertical',
+        scaleID: 'x',
+        value: 'May',
+        borderColor: 'gray',
+        borderWidth: 1,
+        label: {
+            enabled: true,
+            content: 'Başka Bir Olay'
+        }
+    }
+];
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: data,
@@ -58,6 +85,10 @@ var myChart = new Chart(ctx, {
             title: {
                 display: true,
                 text: 'Monthly Budget Overview'
+            },
+
+            annotation: {
+                annotations: annotations
             }
         }
     }
