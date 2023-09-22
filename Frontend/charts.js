@@ -90,6 +90,10 @@ var myChart = new Chart(ctx, {
             annotation: {
                 annotations: annotations
             }
-        }
+        },
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
     }
 });
