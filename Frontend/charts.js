@@ -37,7 +37,7 @@ var annotations = [
         borderWidth: 1,
         label: {
             enabled: true,
-            content: 'Özel Olay'
+            content: 'Special Event'
         }
     },
     {
@@ -49,7 +49,7 @@ var annotations = [
         borderWidth: 1,
         label: {
             enabled: true,
-            content: 'Başka Bir Olay'
+            content: 'Another Event'
         }
     }
 ];
