@@ -24,9 +24,9 @@
 <body>
     <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
         <div class="bg-dark p-4">
-            <h5 class="text-body-emphasis h4">About</h5>
-            <h6 class="text-body-emphasis h4">Documantation</h6>
-            <h7 class="text-body-emphasis h4">Contact</h7>
+            <a class="text-body-emphasis h4" href="about.html">About</a>
+            <a class="text-body-emphasis h4" href="documantation.html">Documantation</a>
+            <a class="text-body-emphasis h4" href="contact.html">Contact</a>
         </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
@@ -36,6 +36,7 @@
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
         </div>
     </nav>
 
@@ -73,7 +74,8 @@
                         <p class="card-text">Description: <span id="recordDescription">Expense</span></p>
                         <p class="card-text">Amount: $<span id="recordAmount">200</span></p>
                         <p class="card-text">Category: <span id="recordCategory">Food</span></p>
-                        <a href="new-record.html" class="btn btn-success">Add Record</a>
+                        <a href="#" class="btn btn-success">Add Record</a>
+                        <button class="btn btn-primary mt-3" id="showChart">Show Chart</button>
                     </div>
                 </div>
             </div>
