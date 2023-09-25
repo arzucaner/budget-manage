@@ -1,4 +1,8 @@
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('showChart').getContext('2d');
+var button = document.getElementById('yourButtonId');
+button.addEventListener('click', function () {
+    createGraphs();
+});
 
 var data = {
     labels: ['January', 'February', 'March', 'April', 'May'],
@@ -54,7 +58,7 @@ var annotations = [
     }
 ];
 
-var myChart = new Chart(ctx, {
+var showChart = new Chart(ctx, {
     type: 'bar',
     data: data,
     options: {
