@@ -1,8 +1,13 @@
 var ctx = document.getElementById('showChart').getContext('2d');
-var button = document.getElementById('yourButtonId');
-button.addEventListener('click', function () {
-    createGraphs();
-});
+window.onload = function () {
+    var canvas = document.getElementById('showChart');
+    if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+    } else {
+        console.error('Cannot find canvas or getContext method');
+    }
+};
 
 var data = {
     labels: ['January', 'February', 'March', 'April', 'May'],

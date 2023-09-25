@@ -18,9 +18,23 @@
             background-attachment: fixed;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+    <canvas id="showChart"></canvas>
+    <script>
+        var canvas = document.getElementById('showChart');
+        var ctx;
+
+        if (canvas && canvas.getContext) {
+            ctx = canvas.getContext('2d');
+        } else {
+            console.error('Cannot find canvas or getContext method');
+        }
+    </script>
+    <script src="./charts.js"></script>
+
     <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
         <div class="bg-dark p-4">
             <a class="text-body-emphasis h4" href="about.html">About</a>
@@ -74,7 +88,7 @@
                         <p class="card-text">Amount: $<span id="recordAmount">200</span></p>
                         <p class="card-text">Category: <span id="recordCategory">Food</span></p>
                         <a href="#" class="btn btn-success">Add Record</a>
-                        <button class="btn btn-primary mt-3" id="showChart">Show Chart</button>
+                        <button id="showChartButton" class="btn btn-primary mt-3">Show Chart</button>
                     </div>
                 </div>
             </div>
@@ -96,20 +110,33 @@
             </div>
         </div>
     </div>
-    <canvas id='showChart'></canvas>
+    <div class="container d-flex justify-content-center align-items-center mt-3"></div>
 
     <script src="./bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="./charts.js"></script>
     <script>
-        document.getElementById('showChart').addEventListener('click', function () {
-            var ctx = document.getElementById('showChart').getContext('2d');
-        });
+        document.getElementById('showChartButton').addEventListener('click', function () {
+            var canvas = document.getElementById('showChart');
+            var ctx;
 
+            if (canvas && canvas.getContext) {
+                ctx = canvas.getContext('2d');
+                createGraphs();
+            } else {
+                console.error('Cannot find canvas or getContext method');
+            }
+        });
     </script>
+
+    <script>
+        document.getElementById('showChartButton').addEventListener('click', function () {
+            createChart();
+        });
+    </script>
+
 
 </body>
 
