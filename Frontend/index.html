@@ -33,6 +33,21 @@
             console.error('Cannot find canvas or getContext method');
         }
     </script>
+
+    <script>
+        document.getElementById('showChartButton').addEventListener('click', function () {
+            var newWidth = 150;
+            var newHeight = 200;
+
+            var canvas = document.getElementById('showChart');
+
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+
+            createGraphs();
+        });
+    </script>
+
     <script src="./charts.js"></script>
 
     <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
