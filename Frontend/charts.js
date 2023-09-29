@@ -1,9 +1,10 @@
-var ctx = document.getElementById('showChart').getContext('2d');
-window.onload = function () {
-    var canvas = document.getElementById('showChart');
-    if (canvas && canvas.getContext) {
-        var ctx = canvas.getContext('2d');
+var canvas = document.getElementById('showChart');
+var ctx;
 
+window.onload = function () {
+    canvas = document.getElementById('showChart');
+    if (canvas && canvas.getContext) {
+        ctx = canvas.getContext('2d');
     } else {
         console.error('Cannot find canvas or getContext method');
     }
@@ -23,7 +24,7 @@ var data = {
             label: 'Housing',
             data: [300, 350, 320, 310, 330],
             backgroundColor: 'rgba(0, 0, 128, 0.4)',
-            borderColor: 'rgba(rgba(0, 0, 128, 1)',
+            borderColor: 'rgba(0, 0, 128, 1)',
             borderWidth: 1
         },
         {
@@ -69,7 +70,7 @@ var showChart = new Chart(ctx, {
     options: {
         animation: {
             duration: 1000,
-            easing: 'easeOutBounce',
+            easing: 'easeOutBounce'
         },
         scales: {
             y: {
@@ -106,7 +107,20 @@ var showChart = new Chart(ctx, {
         },
         interaction: {
             mode: 'index',
-            intersect: false,
-        },
+            intersect: false
+        }
+    }
+});
+
+canvas.addEventListener('click', function (event) {
+    var activePoints = showChart.getElementsAtEventForMode(event, 'point', showChart.options);
+    if (activePoints.length > 0) {
+        var chartData = activePoints[0]._chart.data;
+        var dataIndex = activePoints[0]._index;
+
+        var datasetLabel = chartData.datasets[0].label;
+        var clickedValue = chartData.datasets[0].data[dataIndex];
+
+        alert(`Clicked on ${datasetLabel}: ${clickedValue}`);
     }
 });
