@@ -67,6 +67,10 @@ var showChart = new Chart(ctx, {
     type: 'bar',
     data: data,
     options: {
+        animation: {
+            duration: 1000,
+            easing: 'easeOutBounce',
+        },
         scales: {
             y: {
                 beginAtZero: true,
