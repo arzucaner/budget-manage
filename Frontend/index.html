@@ -13,9 +13,10 @@
     <style>
         body {
             background-image: url('background_image.png');
-            background-size: cover;
+            background-size: 300px 150 px;
             background-repeat: no-repeat;
             background-attachment: fixed;
+
         }
 
         .jumbotron {
@@ -59,8 +60,8 @@
 
     <script>
         document.getElementById('showChartButton').addEventListener('click', function () {
-            var newWidth = 150;
-            var newHeight = 200;
+            var newWidth = 50;
+            var newHeight = 100;
 
             var canvas = document.getElementById('showChart');
 
@@ -93,9 +94,9 @@
 
     <div class="container mt-3">
         <div class="jumbotron text-center bg-success text-white">
-            <h1 class="display-4">Budget Manage</h1>
-            <p class="lead font-italic">"Take Control of Your Finances!"</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">               
+            <h1 class="text-uppercase fw-bolder display-4">Budget Manage</h1>
+            <p class="fst-italic">"Take Control of Your Finances!"</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-primary" type="button">Sign Up</button>
             </div>
         </div>
